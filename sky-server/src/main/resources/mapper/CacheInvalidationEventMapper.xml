@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.skyserver.mapper.CacheInvalidationEventMapper">
+
+    <!-- 插入缓存失效事件 -->
+    <insert id="insert"
+            parameterType="com.example.skyserver.entity.CacheInvalidationEvent"
+            useGeneratedKeys="true"
+            keyProperty="id"
+            keyColumn="id">
+
+        INSERT INTO cache_invalidation_event
+        (
+        event_type,
+        category_id
+        )
+        VALUES
+        (
+        #{eventType},
+        #{categoryId}
+        )
+
+    </insert>
+
+</mapper>

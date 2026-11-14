@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.skyserver.mapper.DishMapper">
+
+    <select id="count" resultType="java.lang.Long">
+        select count(*)
+        from dish
+
+        <where>
+            <if test="name != null and name != ''">
+                and name like concat('%', #{name}, '%')
+            </if>
+
+            <if test="categoryId != null">
+                and category_id = #{categoryId}
+            </if>
+
+            <if test="status != null">
+                and status = #{status}
+            </if>
+        </where>
+    </select>
+
+    <select id="pageQuery"
+            resultType="com.example.skyserver.entity.Dish">
+
+        select *
+        from dish
+
+        <where>
+
+            <if test="name != null and name != ''">
+                and name like concat('%',#{name},'%')
+            </if>
+
+            <if test="categoryId != null">
+                and category_id = #{categoryId}
+            </if>
+
+            <if test="status != null">
+                and status = #{status}
+            </if>
+
+        </where>
+
+        order by create_time desc
+
+        limit #{offset},#{pageSize}
+
+    </select>
+
+    <update id="update">
+
+        update dish
+
+        <set>
+
+            <if test="name != null">
+                name=#{name},
+            </if>
+
+            <if test="categoryId != null">
+                category_id=#{categoryId},
+            </if>
+
+            <if test="price != null">
+                price=#{price},
+            </if>
+
+            <if test="image != null">
+                image=#{image},
+            </if>
+
+            <if test="description != null">
+                description=#{description},
+            </if>
+
+            <if test="status != null">
+                status=#{status},
+            </if>
+
+            update_time=now()
+
+        </set>
+
+        where id=#{id}
+
+    </update>
+
+    <delete id="delete">
+
+        delete from dish
+        where id=#{id}
+
+    </delete>
+
+    <update id="updateStatus">
+
+        update dish
+
+        set status=#{status},
+        update_time=now()
+
+        where id=#{id}
+
+    </update>
+
+    <select id="getById"
+            resultType="com.example.skyserver.entity.Dish">
+
+        select *
+        from dish
+        where id = #{id}
+
+    </select>
+
+    <!-- 用户端：根据分类查询起售菜品 -->
+    <select id="listByCategoryId"
+            resultType="com.example.skyserver.entity.Dish">
+
+        SELECT *
+        FROM dish
+        WHERE category_id = #{categoryId}
+        AND status = 1
+        ORDER BY create_time DESC
+
+    </select>
+</mapper>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.example.skyserver.mapper.WorkspaceMapper">
+    <select id="todayTurnover"
+            resultType="java.math.BigDecimal">
+
+
+        select
+        ifnull(sum(amount),0)
+
+        from orders
+
+
+        where status=5
+
+
+        and date(order_time)=curdate()
+
+
+    </select>
+    <select id="todayOrderCount"
+            resultType="java.lang.Integer">
+
+        select count(*)
+
+        from orders
+
+        where date(order_time)=curdate()
+
+    </select>
+    <select id="validOrderCount"
+            resultType="java.lang.Integer">
+
+        select count(*)
+
+        from orders
+
+        where status != 6
+
+        and date(order_time)=curdate()
+
+    </select>
+    <select id="todayUserCount"
+            resultType="java.lang.Integer">
+
+
+        select count(*)
+
+        from user
+
+        where date(create_time)=curdate()
+
+
+    </select>
+    <select id="waitingOrders"
+            resultType="java.lang.Integer">
+
+
+        select count(*)
+
+        from orders
+
+        where status=2
+
+
+    </select>
+    <select id="deliveryOrders"
+            resultType="java.lang.Integer">
+
+
+        select count(*)
+
+        from orders
+
+        where status=4
+
+
+    </select>
+</mapper>

@@ -1,0 +1,1332 @@
+{
+  "source": "sky_ds.zip / IDEA introspection cache",
+  "source_xml_sha256": "5c140c696cb764408cff5f43ef317cc68ab82b9f22c7afd54773cee7e09ee46a",
+  "zip_timestamp": "2026-11-11 16:44; timezone unspecified",
+  "schema": "sky_take_out",
+  "live_verified": false,
+  "foreign_keys_observed": 0,
+  "tables": [
+    {
+      "name": "address_book",
+      "engine": "InnoDB",
+      "collation": "utf8mb4_unicode_ci",
+      "comment": "地址表",
+      "columns": [
+        {
+          "name": "id",
+          "type": "bigint",
+          "position": 1,
+          "not_null": true,
+          "auto_increment": true,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "user_id",
+          "type": "bigint",
+          "position": 2,
+          "not_null": true,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "consignee",
+          "type": "varchar(50)",
+          "position": 3,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "phone",
+          "type": "varchar(11)",
+          "position": 4,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "province_name",
+          "type": "varchar(32)",
+          "position": 5,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "city_name",
+          "type": "varchar(32)",
+          "position": 6,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "district_name",
+          "type": "varchar(32)",
+          "position": 7,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "detail",
+          "type": "varchar(200)",
+          "position": 8,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        }
+      ],
+      "indexes": [
+        {
+          "name": "PRIMARY",
+          "columns": [
+            "id"
+          ],
+          "unique": true,
+          "type": "btree"
+        }
+      ]
+    },
+    {
+      "name": "cache_invalidation_ack",
+      "engine": "InnoDB",
+      "collation": "utf8mb4_0900_ai_ci",
+      "comment": "各服务器缓存失效事件消费记录表",
+      "columns": [
+        {
+          "name": "event_id",
+          "type": "bigint",
+          "position": 1,
+          "not_null": true,
+          "auto_increment": false,
+          "default": null,
+          "comment": "缓存失效事件ID"
+        },
+        {
+          "name": "instance_id",
+          "type": "varchar(128)",
+          "position": 2,
+          "not_null": true,
+          "auto_increment": false,
+          "default": null,
+          "comment": "消费事件的服务器实例ID"
+        },
+        {
+          "name": "processed_at",
+          "type": "datetime(3)",
+          "position": 3,
+          "not_null": true,
+          "auto_increment": false,
+          "default": "CURRENT_TIMESTAMP(3)",
+          "comment": "处理完成时间"
+        }
+      ],
+      "indexes": [
+        {
+          "name": "PRIMARY",
+          "columns": [
+            "event_id",
+            "instance_id"
+          ],
+          "unique": true,
+          "type": "btree"
+        },
+        {
+          "name": "idx_instance_processed",
+          "columns": [
+            "instance_id",
+            "processed_at"
+          ],
+          "unique": false,
+          "type": "btree"
+        }
+      ]
+    },
+    {
+      "name": "cache_invalidation_event",
+      "engine": "InnoDB",
+      "collation": "utf8mb4_0900_ai_ci",
+      "comment": "缓存失效事件表",
+      "columns": [
+        {
+          "name": "id",
+          "type": "bigint",
+          "position": 1,
+          "not_null": true,
+          "auto_increment": true,
+          "default": null,
+          "comment": "事件ID"
+        },
+        {
+          "name": "event_type",
+          "type": "varchar(64)",
+          "position": 2,
+          "not_null": true,
+          "auto_increment": false,
+          "default": null,
+          "comment": "事件类型"
+        },
+        {
+          "name": "category_id",
+          "type": "bigint",
+          "position": 3,
+          "not_null": true,
+          "auto_increment": false,
+          "default": null,
+          "comment": "需要失效的菜品分类ID"
+        },
+        {
+          "name": "created_at",
+          "type": "datetime(3)",
+          "position": 4,
+          "not_null": true,
+          "auto_increment": false,
+          "default": "CURRENT_TIMESTAMP(3)",
+          "comment": "事件创建时间"
+        }
+      ],
+      "indexes": [
+        {
+          "name": "PRIMARY",
+          "columns": [
+            "id"
+          ],
+          "unique": true,
+          "type": "btree"
+        },
+        {
+          "name": "idx_category_id_id",
+          "columns": [
+            "category_id",
+            "id"
+          ],
+          "unique": false,
+          "type": "btree"
+        },
+        {
+          "name": "idx_created_at",
+          "columns": [
+            "created_at"
+          ],
+          "unique": false,
+          "type": "btree"
+        }
+      ]
+    },
+    {
+      "name": "category",
+      "engine": "InnoDB",
+      "collation": "utf8mb4_unicode_ci",
+      "comment": "分类表",
+      "columns": [
+        {
+          "name": "id",
+          "type": "bigint",
+          "position": 1,
+          "not_null": true,
+          "auto_increment": true,
+          "default": null,
+          "comment": "主键"
+        },
+        {
+          "name": "type",
+          "type": "int",
+          "position": 2,
+          "not_null": true,
+          "auto_increment": false,
+          "default": null,
+          "comment": "类型 1菜品分类 2套餐分类"
+        },
+        {
+          "name": "name",
+          "type": "varchar(32)",
+          "position": 3,
+          "not_null": true,
+          "auto_increment": false,
+          "default": null,
+          "comment": "分类名称"
+        },
+        {
+          "name": "sort",
+          "type": "int",
+          "position": 4,
+          "not_null": true,
+          "auto_increment": false,
+          "default": "0",
+          "comment": "排序"
+        },
+        {
+          "name": "status",
+          "type": "int",
+          "position": 5,
+          "not_null": true,
+          "auto_increment": false,
+          "default": "1",
+          "comment": "状态 1启用 0禁用"
+        },
+        {
+          "name": "create_time",
+          "type": "datetime",
+          "position": 6,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": "创建时间"
+        },
+        {
+          "name": "update_time",
+          "type": "datetime",
+          "position": 7,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": "修改时间"
+        },
+        {
+          "name": "create_user",
+          "type": "bigint",
+          "position": 8,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": "创建人"
+        },
+        {
+          "name": "update_user",
+          "type": "bigint",
+          "position": 9,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": "修改人"
+        }
+      ],
+      "indexes": [
+        {
+          "name": "PRIMARY",
+          "columns": [
+            "id"
+          ],
+          "unique": true,
+          "type": "btree"
+        }
+      ]
+    },
+    {
+      "name": "dish",
+      "engine": "InnoDB",
+      "collation": "utf8mb4_unicode_ci",
+      "comment": "菜品表",
+      "columns": [
+        {
+          "name": "id",
+          "type": "bigint",
+          "position": 1,
+          "not_null": true,
+          "auto_increment": true,
+          "default": null,
+          "comment": "主键"
+        },
+        {
+          "name": "name",
+          "type": "varchar(32)",
+          "position": 2,
+          "not_null": true,
+          "auto_increment": false,
+          "default": null,
+          "comment": "菜品名称"
+        },
+        {
+          "name": "category_id",
+          "type": "bigint",
+          "position": 3,
+          "not_null": true,
+          "auto_increment": false,
+          "default": null,
+          "comment": "菜品分类id"
+        },
+        {
+          "name": "price",
+          "type": "decimal(10,2)",
+          "position": 4,
+          "not_null": true,
+          "auto_increment": false,
+          "default": null,
+          "comment": "菜品价格"
+        },
+        {
+          "name": "image",
+          "type": "varchar(255)",
+          "position": 5,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": "菜品图片"
+        },
+        {
+          "name": "description",
+          "type": "varchar(255)",
+          "position": 6,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": "菜品描述"
+        },
+        {
+          "name": "status",
+          "type": "int",
+          "position": 7,
+          "not_null": true,
+          "auto_increment": false,
+          "default": "1",
+          "comment": "状态 1起售 0停售"
+        },
+        {
+          "name": "create_time",
+          "type": "datetime",
+          "position": 8,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": "创建时间"
+        },
+        {
+          "name": "update_time",
+          "type": "datetime",
+          "position": 9,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": "修改时间"
+        },
+        {
+          "name": "create_user",
+          "type": "bigint",
+          "position": 10,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": "创建人"
+        },
+        {
+          "name": "update_user",
+          "type": "bigint",
+          "position": 11,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": "修改人"
+        }
+      ],
+      "indexes": [
+        {
+          "name": "PRIMARY",
+          "columns": [
+            "id"
+          ],
+          "unique": true,
+          "type": "btree"
+        }
+      ]
+    },
+    {
+      "name": "dish_flavor",
+      "engine": "InnoDB",
+      "collation": "utf8mb4_unicode_ci",
+      "comment": "菜品口味表",
+      "columns": [
+        {
+          "name": "id",
+          "type": "bigint",
+          "position": 1,
+          "not_null": true,
+          "auto_increment": true,
+          "default": null,
+          "comment": "主键"
+        },
+        {
+          "name": "dish_id",
+          "type": "bigint",
+          "position": 2,
+          "not_null": true,
+          "auto_increment": false,
+          "default": null,
+          "comment": "菜品id"
+        },
+        {
+          "name": "name",
+          "type": "varchar(32)",
+          "position": 3,
+          "not_null": true,
+          "auto_increment": false,
+          "default": null,
+          "comment": "口味名称"
+        },
+        {
+          "name": "value",
+          "type": "varchar(255)",
+          "position": 4,
+          "not_null": true,
+          "auto_increment": false,
+          "default": null,
+          "comment": "口味数据"
+        }
+      ],
+      "indexes": [
+        {
+          "name": "PRIMARY",
+          "columns": [
+            "id"
+          ],
+          "unique": true,
+          "type": "btree"
+        }
+      ]
+    },
+    {
+      "name": "employee",
+      "engine": "InnoDB",
+      "collation": "utf8mb4_unicode_ci",
+      "comment": "员工表",
+      "columns": [
+        {
+          "name": "id",
+          "type": "bigint",
+          "position": 1,
+          "not_null": true,
+          "auto_increment": true,
+          "default": null,
+          "comment": "主键"
+        },
+        {
+          "name": "name",
+          "type": "varchar(32)",
+          "position": 2,
+          "not_null": true,
+          "auto_increment": false,
+          "default": null,
+          "comment": "姓名"
+        },
+        {
+          "name": "username",
+          "type": "varchar(32)",
+          "position": 3,
+          "not_null": true,
+          "auto_increment": false,
+          "default": null,
+          "comment": "用户名"
+        },
+        {
+          "name": "password",
+          "type": "varchar(64)",
+          "position": 4,
+          "not_null": true,
+          "auto_increment": false,
+          "default": null,
+          "comment": "密码"
+        },
+        {
+          "name": "phone",
+          "type": "varchar(11)",
+          "position": 5,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": "手机号"
+        },
+        {
+          "name": "sex",
+          "type": "varchar(2)",
+          "position": 6,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": "性别"
+        },
+        {
+          "name": "id_number",
+          "type": "varchar(18)",
+          "position": 7,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": "身份证号"
+        },
+        {
+          "name": "status",
+          "type": "int",
+          "position": 8,
+          "not_null": true,
+          "auto_increment": false,
+          "default": "1",
+          "comment": "状态 1启用 0禁用"
+        },
+        {
+          "name": "create_time",
+          "type": "datetime",
+          "position": 9,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": "创建时间"
+        },
+        {
+          "name": "update_time",
+          "type": "datetime",
+          "position": 10,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": "修改时间"
+        },
+        {
+          "name": "create_user",
+          "type": "bigint",
+          "position": 11,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": "创建人"
+        },
+        {
+          "name": "update_user",
+          "type": "bigint",
+          "position": 12,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": "修改人"
+        }
+      ],
+      "indexes": [
+        {
+          "name": "PRIMARY",
+          "columns": [
+            "id"
+          ],
+          "unique": true,
+          "type": "btree"
+        },
+        {
+          "name": "username",
+          "columns": [
+            "username"
+          ],
+          "unique": true,
+          "type": "btree"
+        }
+      ]
+    },
+    {
+      "name": "order_detail",
+      "engine": "InnoDB",
+      "collation": "utf8mb4_unicode_ci",
+      "comment": "订单明细表",
+      "columns": [
+        {
+          "name": "id",
+          "type": "bigint",
+          "position": 1,
+          "not_null": true,
+          "auto_increment": true,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "order_id",
+          "type": "bigint",
+          "position": 2,
+          "not_null": true,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "name",
+          "type": "varchar(32)",
+          "position": 3,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "image",
+          "type": "varchar(255)",
+          "position": 4,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "dish_id",
+          "type": "bigint",
+          "position": 5,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "setmeal_id",
+          "type": "bigint",
+          "position": 6,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "number",
+          "type": "int",
+          "position": 7,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "amount",
+          "type": "decimal(10,2)",
+          "position": 8,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "dish_flavor",
+          "type": "varchar(50)",
+          "position": 9,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        }
+      ],
+      "indexes": [
+        {
+          "name": "PRIMARY",
+          "columns": [
+            "id"
+          ],
+          "unique": true,
+          "type": "btree"
+        }
+      ]
+    },
+    {
+      "name": "orders",
+      "engine": "InnoDB",
+      "collation": "utf8mb4_unicode_ci",
+      "comment": "订单表",
+      "columns": [
+        {
+          "name": "id",
+          "type": "bigint",
+          "position": 1,
+          "not_null": true,
+          "auto_increment": true,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "number",
+          "type": "varchar(50)",
+          "position": 2,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "status",
+          "type": "int",
+          "position": 3,
+          "not_null": true,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "user_id",
+          "type": "bigint",
+          "position": 4,
+          "not_null": true,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "address_book_id",
+          "type": "bigint",
+          "position": 5,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "order_time",
+          "type": "datetime",
+          "position": 6,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "checkout_time",
+          "type": "datetime",
+          "position": 7,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "pay_method",
+          "type": "int",
+          "position": 8,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "pay_status",
+          "type": "int",
+          "position": 9,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "amount",
+          "type": "decimal(10,2)",
+          "position": 10,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "remark",
+          "type": "varchar(100)",
+          "position": 11,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "phone",
+          "type": "varchar(50)",
+          "position": 12,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "address",
+          "type": "varchar(50)",
+          "position": 13,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "user_name",
+          "type": "varchar(50)",
+          "position": 14,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "consignee",
+          "type": "varchar(50)",
+          "position": 15,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "cancel_Reason",
+          "type": "varchar(50)",
+          "position": 16,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "rejection_reason",
+          "type": "varchar(50)",
+          "position": 17,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "cancel_time",
+          "type": "datetime",
+          "position": 18,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "estimated_delivery_time",
+          "type": "datetime",
+          "position": 19,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "delivery_status",
+          "type": "int",
+          "position": 20,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "delivery_time",
+          "type": "datetime",
+          "position": 21,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "pack_amount",
+          "type": "int",
+          "position": 22,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "tableware_number",
+          "type": "int",
+          "position": 23,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "tableware_status",
+          "type": "int",
+          "position": 24,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        }
+      ],
+      "indexes": [
+        {
+          "name": "PRIMARY",
+          "columns": [
+            "id"
+          ],
+          "unique": true,
+          "type": "btree"
+        }
+      ]
+    },
+    {
+      "name": "setmeal",
+      "engine": "InnoDB",
+      "collation": "utf8mb4_unicode_ci",
+      "comment": "套餐表",
+      "columns": [
+        {
+          "name": "id",
+          "type": "bigint",
+          "position": 1,
+          "not_null": true,
+          "auto_increment": true,
+          "default": null,
+          "comment": "主键"
+        },
+        {
+          "name": "category_id",
+          "type": "bigint",
+          "position": 2,
+          "not_null": true,
+          "auto_increment": false,
+          "default": null,
+          "comment": "套餐分类id"
+        },
+        {
+          "name": "name",
+          "type": "varchar(32)",
+          "position": 3,
+          "not_null": true,
+          "auto_increment": false,
+          "default": null,
+          "comment": "套餐名称"
+        },
+        {
+          "name": "price",
+          "type": "decimal(10,2)",
+          "position": 4,
+          "not_null": true,
+          "auto_increment": false,
+          "default": null,
+          "comment": "套餐价格"
+        },
+        {
+          "name": "image",
+          "type": "varchar(255)",
+          "position": 5,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": "图片"
+        },
+        {
+          "name": "description",
+          "type": "varchar(255)",
+          "position": 6,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": "描述"
+        },
+        {
+          "name": "status",
+          "type": "int",
+          "position": 7,
+          "not_null": true,
+          "auto_increment": false,
+          "default": "1",
+          "comment": "状态 1起售 0停售"
+        },
+        {
+          "name": "create_time",
+          "type": "datetime",
+          "position": 8,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "update_time",
+          "type": "datetime",
+          "position": 9,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "create_user",
+          "type": "bigint",
+          "position": 10,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "update_user",
+          "type": "bigint",
+          "position": 11,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        }
+      ],
+      "indexes": [
+        {
+          "name": "PRIMARY",
+          "columns": [
+            "id"
+          ],
+          "unique": true,
+          "type": "btree"
+        }
+      ]
+    },
+    {
+      "name": "setmeal_dish",
+      "engine": "InnoDB",
+      "collation": "utf8mb4_unicode_ci",
+      "comment": "套餐菜品关系表",
+      "columns": [
+        {
+          "name": "id",
+          "type": "bigint",
+          "position": 1,
+          "not_null": true,
+          "auto_increment": true,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "setmeal_id",
+          "type": "bigint",
+          "position": 2,
+          "not_null": true,
+          "auto_increment": false,
+          "default": null,
+          "comment": "套餐id"
+        },
+        {
+          "name": "dish_id",
+          "type": "bigint",
+          "position": 3,
+          "not_null": true,
+          "auto_increment": false,
+          "default": null,
+          "comment": "菜品id"
+        },
+        {
+          "name": "copies",
+          "type": "int",
+          "position": 4,
+          "not_null": true,
+          "auto_increment": false,
+          "default": null,
+          "comment": "菜品份数"
+        },
+        {
+          "name": "name",
+          "type": "varchar(100)",
+          "position": 5,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "price",
+          "type": "decimal(10,2)",
+          "position": 6,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        }
+      ],
+      "indexes": [
+        {
+          "name": "PRIMARY",
+          "columns": [
+            "id"
+          ],
+          "unique": true,
+          "type": "btree"
+        }
+      ]
+    },
+    {
+      "name": "shopping_cart",
+      "engine": "InnoDB",
+      "collation": "utf8mb4_unicode_ci",
+      "comment": "购物车表",
+      "columns": [
+        {
+          "name": "id",
+          "type": "bigint",
+          "position": 1,
+          "not_null": true,
+          "auto_increment": true,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "name",
+          "type": "varchar(32)",
+          "position": 2,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "image",
+          "type": "varchar(255)",
+          "position": 3,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "user_id",
+          "type": "bigint",
+          "position": 4,
+          "not_null": true,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "dish_id",
+          "type": "bigint",
+          "position": 5,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "setmeal_id",
+          "type": "bigint",
+          "position": 6,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "dish_flavor",
+          "type": "varchar(50)",
+          "position": 7,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "number",
+          "type": "int",
+          "position": 8,
+          "not_null": true,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "amount",
+          "type": "decimal(10,2)",
+          "position": 9,
+          "not_null": true,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "create_time",
+          "type": "datetime",
+          "position": 10,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        }
+      ],
+      "indexes": [
+        {
+          "name": "PRIMARY",
+          "columns": [
+            "id"
+          ],
+          "unique": true,
+          "type": "btree"
+        }
+      ]
+    },
+    {
+      "name": "user",
+      "engine": "InnoDB",
+      "collation": "utf8mb4_unicode_ci",
+      "comment": "用户表",
+      "columns": [
+        {
+          "name": "id",
+          "type": "bigint",
+          "position": 1,
+          "not_null": true,
+          "auto_increment": true,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "openid",
+          "type": "varchar(45)",
+          "position": 2,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": "微信openid"
+        },
+        {
+          "name": "name",
+          "type": "varchar(32)",
+          "position": 3,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "phone",
+          "type": "varchar(11)",
+          "position": 4,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "avatar",
+          "type": "varchar(255)",
+          "position": 5,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        },
+        {
+          "name": "create_time",
+          "type": "datetime",
+          "position": 6,
+          "not_null": false,
+          "auto_increment": false,
+          "default": null,
+          "comment": null
+        }
+      ],
+      "indexes": [
+        {
+          "name": "PRIMARY",
+          "columns": [
+            "id"
+          ],
+          "unique": true,
+          "type": "btree"
+        }
+      ]
+    }
+  ]
+}

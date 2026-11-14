@@ -1,0 +1,52 @@
+[
+  {
+    "file": "round2.jtl",
+    "sha256": "001cc82c0064b83e894924b0be1ad8056327d7c34905f83a042145774bb98997",
+    "samples": 1000,
+    "start_china_time": "2026-11-02T16:30:39.864000+08:00",
+    "end_china_time": "2026-11-02T16:30:40.778000+08:00",
+    "duration_seconds": 0.914,
+    "average_ms": 0.604,
+    "p95_ms": 1,
+    "p99_ms": 2,
+    "min_ms": 0,
+    "max_ms": 17,
+    "failed_samples": 0,
+    "jmeter_error_percent": 0.0,
+    "throughput_per_second": 1094.0919,
+    "max_observed_threads": 2,
+    "urls": [
+      "http://localhost:8080/user/dish/list?categoryId=1"
+    ],
+    "response_codes": [
+      "200"
+    ],
+    "received_kb_per_second": 1354.4836,
+    "sent_kb_per_second": 360.0674
+  },
+  {
+    "file": "round3.jtl",
+    "sha256": "bda201dab180b300f41c0c0e0d21a1d46f1dd31ba7939760e8fd4d9b5dc46095",
+    "samples": 2893,
+    "start_china_time": "2026-11-02T16:39:03.467000+08:00",
+    "end_china_time": "2026-11-02T16:39:33.313000+08:00",
+    "duration_seconds": 29.846,
+    "average_ms": 1.2447,
+    "p95_ms": 2,
+    "p99_ms": 5,
+    "min_ms": 0,
+    "max_ms": 22,
+    "failed_samples": 0,
+    "jmeter_error_percent": 0.0,
+    "throughput_per_second": 96.9309,
+    "max_observed_threads": 10,
+    "urls": [
+      "http://localhost:8080/user/dish/list?categoryId=1"
+    ],
+    "response_codes": [
+      "200"
+    ],
+    "received_kb_per_second": 120.0088,
+    "sent_kb_per_second": 31.9001
+  }
+]

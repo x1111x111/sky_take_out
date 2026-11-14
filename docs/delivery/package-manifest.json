@@ -1,0 +1,765 @@
+{
+  "format": "source delivery candidate",
+  "files": {
+    "README.md": {
+      "size": 6130,
+      "sha256": "6df8111f40373fa86e64738c9887bf11a3ffb3fc5d463cdb71fa569a149dee9a"
+    },
+    ".gitignore": {
+      "size": 179,
+      "sha256": "eafc3b5aa00284b9131ba0a49a61e4ec81857795526715004711432288025e05"
+    },
+    "scripts/admin_password.py": {
+      "size": 616,
+      "sha256": "498a047a47012ff6025eef47ba092802dd0331772d3af72e10626a1fc2c30834"
+    },
+    "scripts/summarize_jtl.py": {
+      "size": 1957,
+      "sha256": "eda543b7dc58c42aac934c12d30866b55b6cfb31c77228d9c643c05af0b722a8"
+    },
+    "scripts/check_delivery.py": {
+      "size": 2724,
+      "sha256": "15f818b9cbb6a829d60ef24f9bbe61e1278ea4146967d17bf64826ec22aaf61f"
+    },
+    "sky-admin/.env.example": {
+      "size": 170,
+      "sha256": "e094149e71ce481237a974ee21e66a22ae26396f3681ba9bf2be8bdb56e96564"
+    },
+    "sky-admin/README.md": {
+      "size": 2894,
+      "sha256": "22cbf4ff35e2a00ef943e96eccf1c658cbd9a651f413888c337d1791326a162f"
+    },
+    "sky-admin/package-lock.json": {
+      "size": 46097,
+      "sha256": "c0b0cd9b05b80f85e8e0bd1dac352bc3db32525890575208ec8513089a4aaff4"
+    },
+    "sky-admin/package.json": {
+      "size": 402,
+      "sha256": "f5ffe4fe0da2967dbc65f14a2afb021cea8003bc44f6452444fc2a5904cfdd36"
+    },
+    "sky-admin/index.html": {
+      "size": 478,
+      "sha256": "98b64aa7bd6b47abc3431d8efe9f8225aa64dd559c096c118257411eb574fdfa"
+    },
+    "sky-admin/.gitignore": {
+      "size": 50,
+      "sha256": "01d9910e5bbc08d311d88195737d52b530951de4966e76020e51b6b60ba8d756"
+    },
+    "sky-admin/vite.config.js": {
+      "size": 1227,
+      "sha256": "931a248960a180808b1ef2c4c65a3f05777e38be61f7fa78bcc4cd359d18efe8"
+    },
+    "sky-server/.env.example": {
+      "size": 509,
+      "sha256": "34acd8803542b6f168e7d47651d3e5a641fbd213a564ec61f8a97c7e64719379"
+    },
+    "sky-server/pom.xml": {
+      "size": 6385,
+      "sha256": "1b660297e46b549fa41a96cb18a96aefd1643df56deaa91ab32011371b303d1c"
+    },
+    "sql/sky_take_out.sql": {
+      "size": 7625,
+      "sha256": "97d4db52999a020f6f437208e2ac15910a56cc29a8bbde6d61f11267a8314777"
+    },
+    "sky-admin/src/main.js": {
+      "size": 111,
+      "sha256": "ae6eb9de53e72b97ee4c88fe88d2e982bf060266b2b82a0aa29ec859fa342019"
+    },
+    "sky-admin/src/App.vue": {
+      "size": 3990,
+      "sha256": "518299798053d0698a8962adb4ecef5d4d2578e6959024311406950126abcbbb"
+    },
+    "sky-admin/src/style.css": {
+      "size": 8810,
+      "sha256": "92c33a2e3e281f258c5fac3e7f500f437eb7b09592f1fb1ab6054a016b8449b5"
+    },
+    "sky-admin/src/router.js": {
+      "size": 661,
+      "sha256": "40c85dc2e43986a64926fbc86177ebea7109aaa68c68cd3f4f44bf1590b765a2"
+    },
+    "sky-admin/tests/frontend.test.mjs": {
+      "size": 6829,
+      "sha256": "66fd41863866de6573cfb4f25bd1ea59fdfd878ffb3fb66cb0c828a4bc1bf8a1"
+    },
+    "sky-admin/public/icons.svg": {
+      "size": 5031,
+      "sha256": "b45fa506195cfcdef406ba9f0c77b36ddc1a7c224040926ec70abc2fdea7b93a"
+    },
+    "sky-admin/public/favicon.svg": {
+      "size": 264,
+      "sha256": "156c0ee96b2c91eb97177c187b7ef5936673cb856cb6e60d3095bb5b1330fceb"
+    },
+    "sky-admin/deploy/nginx.conf": {
+      "size": 447,
+      "sha256": "af49f1c75dbb621e88840b107e715718465bbe0a7ccef53ff62b824fa669530f"
+    },
+    "sky-admin/src/components/Editor.vue": {
+      "size": 4586,
+      "sha256": "8dc406f02bf0e87f0dd4c8ee60bb22394261a756d6271dced1f8eb97e2f59074"
+    },
+    "sky-admin/src/components/OrderDetail.vue": {
+      "size": 995,
+      "sha256": "df19e2de499f3fde89c3857972a4d839b33465bacdea35a884ae54120165e921"
+    },
+    "sky-admin/src/components/Pager.vue": {
+      "size": 409,
+      "sha256": "693dd0e19e9aabf9b2c6ae906c7d34710d74d52a7395f4222afe6a2d9e59df71"
+    },
+    "sky-admin/src/assets/hero.png": {
+      "size": 13057,
+      "sha256": "881ffbcaafc212e49addad08846a5b82761355fa20624253af3477ba33262c5c"
+    },
+    "sky-admin/src/views/Customer.vue": {
+      "size": 10274,
+      "sha256": "3a3e7110645c7dfa2ca00640d6c65d8950cdb839d8902b6530dfff142610bcff"
+    },
+    "sky-admin/src/views/Admin.vue": {
+      "size": 8820,
+      "sha256": "468b6e4980dedc888232f837c9290f1045173c449c26c4f5b4c1efade48333db"
+    },
+    "sky-admin/src/api/contracts.js": {
+      "size": 626,
+      "sha256": "28634385ee63b5ef520383ea313133b6051c2d647f9f9d5753658592f25dc383"
+    },
+    "sky-admin/src/api/client.js": {
+      "size": 3165,
+      "sha256": "2b4c7e64bd289062b316b88fbc4caf98f3a78448ba900b8003cfad0bce3175f4"
+    },
+    "sky-server/src/main/resources/application.yml": {
+      "size": 1056,
+      "sha256": "750dbd4eb9223beae1a96b88054e45c5056183e0be3cf31d5db3d2d0ef7e5f91"
+    },
+    "sky-server/src/main/java/com/example/skyserver/SkyServerApplication.java": {
+      "size": 510,
+      "sha256": "e4f04b5674a4be39f215672b7ad9108ceeef915fbea35f46764cb3f19ab0c2e8"
+    },
+    "sky-server/src/main/java/com/example/skyserver/config/UserLoginCheckInterceptor.java": {
+      "size": 2264,
+      "sha256": "cb01b682f31351b0da43bd3a34bf5c40a9c00bced176e7b792ce595db9caf6f0"
+    },
+    "sky-server/src/main/java/com/example/skyserver/config/LocalCacheConfig.java": {
+      "size": 745,
+      "sha256": "cb1ac436439c52864069934d753d0531865fed1372d28a024b1789f29138b09b"
+    },
+    "sky-server/src/main/java/com/example/skyserver/config/WebMvcConfiguration.java": {
+      "size": 2031,
+      "sha256": "1e442530587e249718fa05277dfae660a9a1493d3fd44372a357bbd090700527"
+    },
+    "sky-server/src/main/java/com/example/skyserver/config/DishCacheWarmUp.java": {
+      "size": 3147,
+      "sha256": "23608e076807aa38c04c32ac98388dfa0d9b4097f169517e28a9c39be5336f8c"
+    },
+    "sky-server/src/main/java/com/example/skyserver/config/RedisCircuitBreakerConfig.java": {
+      "size": 2282,
+      "sha256": "15c4e5fca6701451a88d367ede6585841cb429188a2c2a0d6dc4cf5e4c867831"
+    },
+    "sky-server/src/main/java/com/example/skyserver/config/CacheEvictionSchedulerConfig.java": {
+      "size": 862,
+      "sha256": "9117051672cf3b63f7b91945bcc9ac531389674f914b214547bb43836f39ae8f"
+    },
+    "sky-server/src/main/java/com/example/skyserver/config/LoginCheckInterceptor.java": {
+      "size": 1885,
+      "sha256": "eb502fec020743d31f8d0a968e6f662db16e187ddba40234e2d0b877a5526d7d"
+    },
+    "sky-server/src/main/java/com/example/skyserver/config/RedisMessageConfig.java": {
+      "size": 1465,
+      "sha256": "e231158b53f6d3700a500f62a04a8fdc8b201cbcea689e43e8d38fc6c34c43bf"
+    },
+    "sky-server/src/main/java/com/example/skyserver/config/PasswordConfig.java": {
+      "size": 463,
+      "sha256": "7f6823997e02b256c3542509f7b31793c3ab0fd4ed9fcede4d622be25c8fbd49"
+    },
+    "sky-server/src/main/java/com/example/skyserver/config/CacheInvalidationEventCleanupJob.java": {
+      "size": 2170,
+      "sha256": "48518acb54608c6ff4f0cb187873259bec577da75583716b70c9a2f3108888de"
+    },
+    "sky-server/src/main/java/com/example/skyserver/config/OpenApiConfig.java": {
+      "size": 1359,
+      "sha256": "e444c0365f8d4998e769c19ec25e8f8e5d95bb7958c4d340256eba5ddf031e63"
+    },
+    "sky-server/src/main/java/com/example/skyserver/dto/ShoppingCartDTO.java": {
+      "size": 368,
+      "sha256": "8a0ea82aec4a28703ed8f9b1751e883989d1f05430f3c409ff65ff5a746d871c"
+    },
+    "sky-server/src/main/java/com/example/skyserver/dto/DishDTO.java": {
+      "size": 885,
+      "sha256": "f1b32e31af9118644d6f6fdd84d9048593509fd80aaca1bebc7c056258718905"
+    },
+    "sky-server/src/main/java/com/example/skyserver/dto/EmployeePageQueryDTO.java": {
+      "size": 205,
+      "sha256": "02c003535a14c769cf80d783189f78046758e292f9c09e6a1f4168e279457d18"
+    },
+    "sky-server/src/main/java/com/example/skyserver/dto/CategoryUpdateDTO.java": {
+      "size": 463,
+      "sha256": "e7ba76b01627ab90b8bbc9f77e99fabd03c505d8409667662999f885c8d70724"
+    },
+    "sky-server/src/main/java/com/example/skyserver/dto/CategorySaveDTO.java": {
+      "size": 452,
+      "sha256": "9261c5be9595d17889724daac072eaf0d94cb1f6404f202ddf0af7d8161284ea"
+    },
+    "sky-server/src/main/java/com/example/skyserver/dto/EmployeeUpdateDTO.java": {
+      "size": 275,
+      "sha256": "e98180b662bded86fa6e6bd49627dbcce6da009d1317f467ffa5b7658e4a8c95"
+    },
+    "sky-server/src/main/java/com/example/skyserver/dto/EmployeeLoginDTO.java": {
+      "size": 166,
+      "sha256": "2d0fcd2489bb60f20bf51226bb95c4f11c7eb4591ca7bb278959c57b42a31ab5"
+    },
+    "sky-server/src/main/java/com/example/skyserver/dto/SetmealPageQueryDTO.java": {
+      "size": 263,
+      "sha256": "4869366d5af9df27fc77c7e4965fc41dc2d72b9d1424d036d049ede8c3900da2"
+    },
+    "sky-server/src/main/java/com/example/skyserver/dto/UserOrderPageQueryDTO.java": {
+      "size": 397,
+      "sha256": "aff0ca98822559feeff32616b9bcdc0fc33f895dc63babc6cfb3643340b4344c"
+    },
+    "sky-server/src/main/java/com/example/skyserver/dto/EmployeeSaveDTO.java": {
+      "size": 249,
+      "sha256": "799cac00a288272d3b714b0e0ee25ef709a8603a3c791c821c47b630ee8cf878"
+    },
+    "sky-server/src/main/java/com/example/skyserver/dto/OrdersConfirmDTO.java": {
+      "size": 249,
+      "sha256": "24ef14dff0b8c7242ff516033f71b4b736bae1379ea95a52ff4dafe3ededa1f3"
+    },
+    "sky-server/src/main/java/com/example/skyserver/dto/DishPageQueryDTO.java": {
+      "size": 264,
+      "sha256": "44b26ed3e7a2bcac139d819999b3cfd73a4dd0e229faedaa73d98541834ccbd1"
+    },
+    "sky-server/src/main/java/com/example/skyserver/dto/OrdersRejectionDTO.java": {
+      "size": 354,
+      "sha256": "9d2df96c57ae22c5103eecb2bef23ac9b024e026c184999b063db99192626c89"
+    },
+    "sky-server/src/main/java/com/example/skyserver/dto/OrdersDetailDTO.java": {
+      "size": 1002,
+      "sha256": "d53e65f455bcbdf7f2af54e5bfbf5191c6958f643b9481bd1c464cad960ac5c7"
+    },
+    "sky-server/src/main/java/com/example/skyserver/dto/SetmealDTO.java": {
+      "size": 462,
+      "sha256": "9f1aae80cff85e10b9d484ec3c060017b0f89c64b8b83992aba16d599508b046"
+    },
+    "sky-server/src/main/java/com/example/skyserver/dto/ReportQueryDTO.java": {
+      "size": 199,
+      "sha256": "3ac73a8cf9fae7ba4fa3a20bad6cd6bc01cd9ca4487c1b5a166659b9b9b838ea"
+    },
+    "sky-server/src/main/java/com/example/skyserver/dto/UserLoginDTO.java": {
+      "size": 250,
+      "sha256": "9864cd22a7a85959418e2f7fe282d54f81c47d9427883c7863cb75b31b0d1f85"
+    },
+    "sky-server/src/main/java/com/example/skyserver/dto/OrdersSubmitDTO.java": {
+      "size": 439,
+      "sha256": "91f805e87a4360efbe6142305b41d9e7c615177bf9f9ecaf5e3f7c5d9bc8bd3a"
+    },
+    "sky-server/src/main/java/com/example/skyserver/dto/DishSaveDTO.java": {
+      "size": 317,
+      "sha256": "abb315fc0dacdb3944754397580f87a15c67230db763b16a6ec7bd26f89b846f"
+    },
+    "sky-server/src/main/java/com/example/skyserver/dto/CategoryPageQueryDTO.java": {
+      "size": 244,
+      "sha256": "1bb171a71882bb81744adb21502180d7d28670e6242bf2e2d0c073cb3c46e57d"
+    },
+    "sky-server/src/main/java/com/example/skyserver/dto/OrdersPageQueryDTO.java": {
+      "size": 453,
+      "sha256": "1f5b89d450ffa48ec9a86d0a4a5fda2892a2167a9825d12c1f154f9007f5bd8c"
+    },
+    "sky-server/src/main/java/com/example/skyserver/dto/DishUpdateDTO.java": {
+      "size": 553,
+      "sha256": "0fe4926581b08fadc2e1cf54d5c6f4601d74adf626f3d1b087819b6674c8ac63"
+    },
+    "sky-server/src/main/java/com/example/skyserver/utils/JwtUtil.java": {
+      "size": 1581,
+      "sha256": "6927bbbfdf70dc4acf3e88ec34b5baaa682df96b1312fbbeba09118d5e59fd2b"
+    },
+    "sky-server/src/main/java/com/example/skyserver/controller/UserSetmealController.java": {
+      "size": 993,
+      "sha256": "4be485452886e81a34f7c0ef55f1227fc31319a4dda1e9e0bcb346f415aefdab"
+    },
+    "sky-server/src/main/java/com/example/skyserver/controller/CommonController.java": {
+      "size": 2063,
+      "sha256": "677372233be573f05bfd168280e31fd81553e2d2732d1c50dd6fd1026f67f781"
+    },
+    "sky-server/src/main/java/com/example/skyserver/controller/WorkspaceController.java": {
+      "size": 990,
+      "sha256": "e522fcc7323910ede08fae07906622c099e0eea45ca62eaeae1cff0d4dabc748"
+    },
+    "sky-server/src/main/java/com/example/skyserver/controller/UserOrderController.java": {
+      "size": 2577,
+      "sha256": "b0356ad6231d76f95607714f3f2c75af9b0b1148c009ecb9d9ccd1e2f6f3f7e2"
+    },
+    "sky-server/src/main/java/com/example/skyserver/controller/DishFlavorController.java": {
+      "size": 1437,
+      "sha256": "51fbc6974815e5dc18b75804237d3af204308b40889eb17c5c35f680441bf1cd"
+    },
+    "sky-server/src/main/java/com/example/skyserver/controller/ShopController.java": {
+      "size": 1478,
+      "sha256": "0ee51d6935a0ba25e602182dc801c2e4439130b053f203083fb3a92ca36e1dae"
+    },
+    "sky-server/src/main/java/com/example/skyserver/controller/DishController.java": {
+      "size": 2159,
+      "sha256": "52a2b9d7562341e9793472058112aad815c597cca4f802eb7b3954d6e2245bbd"
+    },
+    "sky-server/src/main/java/com/example/skyserver/controller/EmployeeController.java": {
+      "size": 5160,
+      "sha256": "d87e20502e5f31873435c8edbc8ec07b3700310e1945301685c8d3284fe3ecd5"
+    },
+    "sky-server/src/main/java/com/example/skyserver/controller/OrdersController.java": {
+      "size": 2638,
+      "sha256": "c2ef94162d0a9fc3ea2d4fc14d2e6e18aac07c9e849370f767c033e4d10bcc20"
+    },
+    "sky-server/src/main/java/com/example/skyserver/controller/UserDishController.java": {
+      "size": 966,
+      "sha256": "f87c7e5b8f87035ba2eda6ad15fd80833e6998bc944d23b83d9a11a0400abdaa"
+    },
+    "sky-server/src/main/java/com/example/skyserver/controller/UserCategoryController.java": {
+      "size": 714,
+      "sha256": "36f14a967d7189ebbe05630ec443a41e4ddfe841e5eab8200c7b64f33597b436"
+    },
+    "sky-server/src/main/java/com/example/skyserver/controller/ShoppingCartController.java": {
+      "size": 1427,
+      "sha256": "78a594b9cd32300914a38245b1fdf8329311b23673cdfbf4010022fb65d8b6cc"
+    },
+    "sky-server/src/main/java/com/example/skyserver/controller/AddressBookController.java": {
+      "size": 1170,
+      "sha256": "56b38d2bcf28c1f2ed22089029a0d137fe031d9db0edb9f00f31bce346219607"
+    },
+    "sky-server/src/main/java/com/example/skyserver/controller/UserController.java": {
+      "size": 864,
+      "sha256": "227d54f3e4548bd1fc2cc9cb8d98c62d097b5906194629561950c0bbf66b8a71"
+    },
+    "sky-server/src/main/java/com/example/skyserver/controller/CategoryController.java": {
+      "size": 1959,
+      "sha256": "7d28c91812fc2a0d78b17ba6095ae790a54dc45ad98ac68cde2d3fbc80d9afe2"
+    },
+    "sky-server/src/main/java/com/example/skyserver/controller/ReportController.java": {
+      "size": 2971,
+      "sha256": "a3700a4352947ad2cc4e5a5c599272c1448279b67a896a1f2b5ef2dfe390998a"
+    },
+    "sky-server/src/main/java/com/example/skyserver/controller/SetmealController.java": {
+      "size": 2030,
+      "sha256": "8801c35354b8d3af6e58d5a48d65b891ad7f76c41196487fd4ac3054173a551f"
+    },
+    "sky-server/src/main/java/com/example/skyserver/vo/EmployeeLoginVO.java": {
+      "size": 213,
+      "sha256": "3564e46c5719837e0e762dd9df46b329a8ef686b765689b9bf083660d17389c2"
+    },
+    "sky-server/src/main/java/com/example/skyserver/vo/EmployeeVO.java": {
+      "size": 415,
+      "sha256": "6dfa30fd84b9e9c986ff60c05788018f3eb42fec39d3baec05ca480dd0208969"
+    },
+    "sky-server/src/main/java/com/example/skyserver/vo/UserReportVO.java": {
+      "size": 261,
+      "sha256": "1c684b21783b4450d59906665556e7aa7e2db7b053fc28a7737bbafb39aba8d7"
+    },
+    "sky-server/src/main/java/com/example/skyserver/vo/OrderReportVO.java": {
+      "size": 548,
+      "sha256": "b51f7f30290e302a5c50d100e24a9e32ccfd6f7c22db942110915c97615dcd41"
+    },
+    "sky-server/src/main/java/com/example/skyserver/vo/SalesTop10ReportVO.java": {
+      "size": 252,
+      "sha256": "fc76b5c628cfb8d0057da4cf5c4e22b7cc2a146933388382e8f6cf1f92867f06"
+    },
+    "sky-server/src/main/java/com/example/skyserver/vo/OrderStatisticsVO.java": {
+      "size": 289,
+      "sha256": "cde6a16bf324123cfb539c1b4dd05b719b19ff2441607e80a245ebfbe26de521"
+    },
+    "sky-server/src/main/java/com/example/skyserver/vo/TurnoverReportVO.java": {
+      "size": 317,
+      "sha256": "f0cb480e864397d755c14e7ffefc2b0a4a044d66481b485dac3bb1bf4f4b133b"
+    },
+    "sky-server/src/main/java/com/example/skyserver/vo/BusinessDataVO.java": {
+      "size": 511,
+      "sha256": "cb8f0f1c3408a4fdf0ac90a3170f746ef7d70f4b631375fc3644425afb11c2b0"
+    },
+    "sky-server/src/main/java/com/example/skyserver/cache/DishLocalCacheManager.java": {
+      "size": 4300,
+      "sha256": "bc97b92883983602dc3d8803df1a54206f5d9fdb9ca7c7b983fbbfb5ab19c8dc"
+    },
+    "sky-server/src/main/java/com/example/skyserver/cache/CacheInvalidationPublisher.java": {
+      "size": 1458,
+      "sha256": "facdef1d76c791a9d64b2ac9c92ea329272af56bbff4f8850b245126c75929b2"
+    },
+    "sky-server/src/main/java/com/example/skyserver/cache/CacheInvalidationPoller.java": {
+      "size": 4733,
+      "sha256": "055b299645a8eaeb17bc864dbd6565b89658db440b7de99f9fc4564323983916"
+    },
+    "sky-server/src/main/java/com/example/skyserver/cache/CacheInvalidationListener.java": {
+      "size": 1386,
+      "sha256": "ec00af7cfd21bc030810b0141f5f92be9e30a11df14fde9933503fa9c4175e73"
+    },
+    "sky-server/src/main/java/com/example/skyserver/handler/GlobalExceptionHandler.java": {
+      "size": 1860,
+      "sha256": "eef85626e818d93ab5bd2feb2e578432e6a0aef83008f79a83a6d388a453c671"
+    },
+    "sky-server/src/main/java/com/example/skyserver/service/EmployeeService.java": {
+      "size": 878,
+      "sha256": "795a9fb0039be0d6ebb43eaae4f779a86ecd355174d5d044de81225d793b99fd"
+    },
+    "sky-server/src/main/java/com/example/skyserver/service/ReportService.java": {
+      "size": 741,
+      "sha256": "56cb9bff046e32d181b4a44a1537ccf2af8c4d31982822c70e1226681f66ee04"
+    },
+    "sky-server/src/main/java/com/example/skyserver/service/SetmealService.java": {
+      "size": 617,
+      "sha256": "8066e86472404e285898c6953c0c067bc2200b07a0f153358d84bfcdc7f08caf"
+    },
+    "sky-server/src/main/java/com/example/skyserver/service/AddressBookService.java": {
+      "size": 236,
+      "sha256": "db8889601ea55b9d57380b3a8288582062cc62bb83569030cd961c1466aedf63"
+    },
+    "sky-server/src/main/java/com/example/skyserver/service/ShoppingCartService.java": {
+      "size": 470,
+      "sha256": "7998e95f3b873ec1c9e0c12ef005678208d30a06cbf6f2be71a9c20a00282a5f"
+    },
+    "sky-server/src/main/java/com/example/skyserver/service/DishService.java": {
+      "size": 677,
+      "sha256": "98d73cb679d95344b936f80ee330d2f81e86095944d1ac7799960d6cdfa72467"
+    },
+    "sky-server/src/main/java/com/example/skyserver/service/OrdersService.java": {
+      "size": 992,
+      "sha256": "44833a24b99370175a510767ddabeda3ea459d7760eba133811b606bed071161"
+    },
+    "sky-server/src/main/java/com/example/skyserver/service/UserService.java": {
+      "size": 188,
+      "sha256": "da396c6786074165ab3b20e8f5e0d266d43667d0b8a214487e31d0b041ead3d0"
+    },
+    "sky-server/src/main/java/com/example/skyserver/service/ShopService.java": {
+      "size": 202,
+      "sha256": "58f76c2cf0b6195aeaf8b6e5164ca2624664a034448029ca2c070226488baeba"
+    },
+    "sky-server/src/main/java/com/example/skyserver/service/CategoryService.java": {
+      "size": 595,
+      "sha256": "6cd78e0bcb8948d74e562107d8b83ed4d3371e559d624ddd5959bddcde9ced24"
+    },
+    "sky-server/src/main/java/com/example/skyserver/service/WorkspaceService.java": {
+      "size": 173,
+      "sha256": "cec950a22949ac8a5da20181545c5512a7f90765c84038eb897de30f4f6f10da"
+    },
+    "sky-server/src/main/java/com/example/skyserver/service/DishFlavorService.java": {
+      "size": 278,
+      "sha256": "b8687cd0392e7842efcc8d4dabe3965b11b78501f73551494f4bca6bb4d2aee7"
+    },
+    "sky-server/src/main/java/com/example/skyserver/result/Result.java": {
+      "size": 817,
+      "sha256": "16a9d8a92196c5e03c2afe9453f47ea0be25e33ae797bc66bc6ac8af6545dec7"
+    },
+    "sky-server/src/main/java/com/example/skyserver/result/PageResult.java": {
+      "size": 297,
+      "sha256": "c2042a4cad359880bb722e04f819af5b9c42c78b651ce4b17688e998244667c5"
+    },
+    "sky-server/src/main/java/com/example/skyserver/entity/Setmeal.java": {
+      "size": 519,
+      "sha256": "c95c0deb142d63b2e7f2768d77489fd940fa00736aba834adaa78dd1612ea8fc"
+    },
+    "sky-server/src/main/java/com/example/skyserver/entity/CacheInvalidationEvent.java": {
+      "size": 533,
+      "sha256": "61943fea522a1ce38db1bc1be6a2137a1ff9228f22ec6f6c155df78637684b89"
+    },
+    "sky-server/src/main/java/com/example/skyserver/entity/ShoppingCart.java": {
+      "size": 474,
+      "sha256": "867fa0b11a84ce0fcaf74a7d94b4aa9d6e2a04a5a9371c81a1658139268b8c8d"
+    },
+    "sky-server/src/main/java/com/example/skyserver/entity/DishFlavor.java": {
+      "size": 210,
+      "sha256": "f08f2afd41cb5b5bee1d3d909458a1226e1fe48fe6ae3c3bc3e24b6534fe66f9"
+    },
+    "sky-server/src/main/java/com/example/skyserver/entity/SetmealDish.java": {
+      "size": 322,
+      "sha256": "a431954e8ab9ac6562f3c557d003edc235ed5d6f226af5c4411fa602270ae830"
+    },
+    "sky-server/src/main/java/com/example/skyserver/entity/Category.java": {
+      "size": 417,
+      "sha256": "07c648b59b9ecf3228dd1375a1f1fd8028ceebef75c456f1f6e61391bc7f39d3"
+    },
+    "sky-server/src/main/java/com/example/skyserver/entity/AddressBook.java": {
+      "size": 338,
+      "sha256": "1272c6fe537c7689b4dc2b1770aa8897197a7e618cae42d41759565a3a680683"
+    },
+    "sky-server/src/main/java/com/example/skyserver/entity/Dish.java": {
+      "size": 518,
+      "sha256": "3e2ac21e028e7e2700518de6762efe64845456c226c700d908f41d90c143f7d0"
+    },
+    "sky-server/src/main/java/com/example/skyserver/entity/Orders.java": {
+      "size": 1013,
+      "sha256": "428fd41dd61c14896c89276612a96c16a6a42b7f6167bad60c679f7bfa3f23bc"
+    },
+    "sky-server/src/main/java/com/example/skyserver/entity/User.java": {
+      "size": 312,
+      "sha256": "6b042209d9d7d0a14df9d289e1474818cc29ed21ace49c7bc61728e0f0e9d055"
+    },
+    "sky-server/src/main/java/com/example/skyserver/entity/Employee.java": {
+      "size": 583,
+      "sha256": "d72b408c7115512fedb59cceb0a6d45e09b2b48ad9003eb6230685c63b42fdea"
+    },
+    "sky-server/src/main/java/com/example/skyserver/entity/OrderDetail.java": {
+      "size": 400,
+      "sha256": "68fd1a85a4a5446934b585703f58fe4d494b839fb26a7a08f7488e90830f7067"
+    },
+    "sky-server/src/main/java/com/example/skyserver/context/UserContext.java": {
+      "size": 419,
+      "sha256": "c2c3b2bfe3826af14f49ef3b197189c497602d20cf8271fed0d98ba846ba6297"
+    },
+    "sky-server/src/main/java/com/example/skyserver/mapper/AddressBookMapper.java": {
+      "size": 337,
+      "sha256": "0f40f10e371010ee2929e9d757dbdb239457d3b32a9d65d02ce32ea9e64add7d"
+    },
+    "sky-server/src/main/java/com/example/skyserver/mapper/CacheInvalidationEventMapper.java": {
+      "size": 1610,
+      "sha256": "a1dc620bb645b9cfe0b2d11d7422786754d1f67578393a02766ad4351b67addb"
+    },
+    "sky-server/src/main/java/com/example/skyserver/mapper/DishFlavorMapper.java": {
+      "size": 633,
+      "sha256": "87d29b13f525e89fc9d581cb241381d6f4bec1c265eed27ff79a37e9475c21db"
+    },
+    "sky-server/src/main/java/com/example/skyserver/mapper/CategoryMapper.java": {
+      "size": 987,
+      "sha256": "a2e78be88b7644a3603fc31b264d9f7753ba2cd774c26ac32ca2d541cc5b20db"
+    },
+    "sky-server/src/main/java/com/example/skyserver/mapper/UserMapper.java": {
+      "size": 290,
+      "sha256": "c7bbfb638b24e0a8bec3cdcb749ed0df9b711096ce83b5658a75a1c8f3d04e20"
+    },
+    "sky-server/src/main/java/com/example/skyserver/mapper/CacheInvalidationAckMapper.java": {
+      "size": 1672,
+      "sha256": "3f288ae1f799b7da51577d669463784f866546b5bc0ddaee7ae030b22b2dacdd"
+    },
+    "sky-server/src/main/java/com/example/skyserver/mapper/EmployeeMapper.java": {
+      "size": 3452,
+      "sha256": "7b34c14afca6359e1f811418f2ef6c3cd12cde4305fff4cd6d3814dfc60f0027"
+    },
+    "sky-server/src/main/java/com/example/skyserver/mapper/SetmealMapper.java": {
+      "size": 1034,
+      "sha256": "b811d8097a59bf8a219ed8a4d5d93cfb3f24d1db45cbd9461307acbaa73a9fb2"
+    },
+    "sky-server/src/main/java/com/example/skyserver/mapper/ReportMapper.java": {
+      "size": 407,
+      "sha256": "34bd1fb8b74549e3b8eef6eca2fe4016a5de9a2b72f0e82277244b980d48d181"
+    },
+    "sky-server/src/main/java/com/example/skyserver/mapper/SetmealDishMapper.java": {
+      "size": 360,
+      "sha256": "d30dd6f281c97cd819b495e5d7ee0b29f342e88b3ad4c5582e047eb0f4aad3c5"
+    },
+    "sky-server/src/main/java/com/example/skyserver/mapper/ShoppingCartMapper.java": {
+      "size": 881,
+      "sha256": "00a4be7dd884a1e06d64e90306de8d92c8cc2ec722a681a5a9193a2ba5ae1557"
+    },
+    "sky-server/src/main/java/com/example/skyserver/mapper/OrdersMapper.java": {
+      "size": 2548,
+      "sha256": "de6f6286d52a9663800c3483bcfa9019b39525003a2952753e2e775e0acda987"
+    },
+    "sky-server/src/main/java/com/example/skyserver/mapper/WorkspaceMapper.java": {
+      "size": 519,
+      "sha256": "b884196167c46a376f2d276b0a4b95c1355792e98ae24299b0245d96537aded9"
+    },
+    "sky-server/src/main/java/com/example/skyserver/mapper/DishMapper.java": {
+      "size": 1555,
+      "sha256": "092e007e53f78f7f0e7b314c44ba062157f6e2f44046f35f6eef09dee3f95e5f"
+    },
+    "sky-server/src/main/java/com/example/skyserver/mapper/OrderDetailMapper.java": {
+      "size": 574,
+      "sha256": "2d7ce18907537b1f2137e3badb49a6ca364b039bfaec3c32575236a64e6a02a6"
+    },
+    "sky-server/src/main/java/com/example/skyserver/exception/BusinessException.java": {
+      "size": 186,
+      "sha256": "34469eb507071eacb1838bac0935ca302f502d61fc71391b2ee78b5ff24b8d95"
+    },
+    "sky-server/src/main/java/com/example/skyserver/service/impl/ShoppingCartServiceImpl.java": {
+      "size": 2615,
+      "sha256": "786612aac0921a219ec46604c980c2de34dd275c65691e81724f58582935d73a"
+    },
+    "sky-server/src/main/java/com/example/skyserver/service/impl/SetmealServiceImpl.java": {
+      "size": 11007,
+      "sha256": "d649bd5a3e508f9ee1ec1a6dd78223ed0510e11c85c3579860d033089e765c5e"
+    },
+    "sky-server/src/main/java/com/example/skyserver/service/impl/EmployeeServiceImpl.java": {
+      "size": 7341,
+      "sha256": "bd3a1d631aee19a5d6aa3ed004eaf5c1c2956ed13ac291426cd5ede9f840e05f"
+    },
+    "sky-server/src/main/java/com/example/skyserver/service/impl/DishFlavorServiceImpl.java": {
+      "size": 874,
+      "sha256": "e19d21a277f85b22dceb2505ed17abf08580014cbb0ea8f8d7d90337e79c7ca0"
+    },
+    "sky-server/src/main/java/com/example/skyserver/service/impl/WorkspaceServiceImpl.java": {
+      "size": 1204,
+      "sha256": "68c66c6548fef183270390c88fbc4af74a99d6c7e21ea3553639695f21538d5c"
+    },
+    "sky-server/src/main/java/com/example/skyserver/service/impl/OrdersServiceImpl.java": {
+      "size": 17144,
+      "sha256": "093a97a61671db4eb73da6b8bc232919463bc65294f6a2ae218655b8181166cd"
+    },
+    "sky-server/src/main/java/com/example/skyserver/service/impl/UserServiceImpl.java": {
+      "size": 1434,
+      "sha256": "dd67a4efb75df0822c8cd56dc65047593ad0ecde624517ef97eaaa8d3fd7ca58"
+    },
+    "sky-server/src/main/java/com/example/skyserver/service/impl/ReportServiceImpl.java": {
+      "size": 6692,
+      "sha256": "f6444c530b458e62ddc69fb47f2bfac7da4871382cdb0c354e347139deee3ea9"
+    },
+    "sky-server/src/main/java/com/example/skyserver/service/impl/AddressBookServiceImpl.java": {
+      "size": 1045,
+      "sha256": "22a2eec2aadc8e6844f5109aa38c66f7da940036926acef910bc15256e91021b"
+    },
+    "sky-server/src/main/java/com/example/skyserver/service/impl/ShopServiceImpl.java": {
+      "size": 3024,
+      "sha256": "cc7cd583f11e00a47278d0f0cace00498a136c97e400bf1bc583c96f98ef5b53"
+    },
+    "sky-server/src/main/java/com/example/skyserver/service/impl/CategoryServiceImpl.java": {
+      "size": 2322,
+      "sha256": "0e058faf8542fc6e07ce51f6ded5f053d16bebc3c9106a728d4001fe39daa446"
+    },
+    "sky-server/src/main/java/com/example/skyserver/service/impl/DishServiceImpl.java": {
+      "size": 30140,
+      "sha256": "ca4287c025e3c0ad4d38cf865614365924a7bab947f701b676d084895841aecb"
+    },
+    "sky-server/src/main/resources/mapper/SetmealDishMapper.xml": {
+      "size": 916,
+      "sha256": "fbe6874228f72486c9c84a8825d87b8ca0a249da4c5e96178102d78f4bb78e27"
+    },
+    "sky-server/src/main/resources/mapper/ShoppingCartMapper.xml": {
+      "size": 2910,
+      "sha256": "dce800edfbb6e4285548507a03dff6a1c388516a9858531eec22380fc4c1c6f6"
+    },
+    "sky-server/src/main/resources/mapper/WorkspaceMapper.xml": {
+      "size": 1444,
+      "sha256": "48545645f7711cb91c7d28a477f895458d705b2ece5fda358290cf24da62151a"
+    },
+    "sky-server/src/main/resources/mapper/UserMapper.xml": {
+      "size": 952,
+      "sha256": "f6e60d140f290f66ffb0305e031aa5ee9425ba204bf49912d2fc77b9b3db2f66"
+    },
+    "sky-server/src/main/resources/mapper/DishMapper.xml": {
+      "size": 2839,
+      "sha256": "de22ad004308264de5f800e79a97588e934c9bef722044465b432b8ad850befe"
+    },
+    "sky-server/src/main/resources/mapper/CacheInvalidationEventMapper.xml": {
+      "size": 720,
+      "sha256": "f7263d16ea2af12ef1104b75048955bb68f5706c2691dcfd9f255eb1a5a0725d"
+    },
+    "sky-server/src/main/resources/mapper/ReportMapper.xml": {
+      "size": 609,
+      "sha256": "c5f5b5175195911a74c79888db0325fc06a58169d2eec480c4a515c5672402b7"
+    },
+    "sky-server/src/main/resources/mapper/OrdersMapper.xml": {
+      "size": 4756,
+      "sha256": "adc86f15c5a7bfad870aabcebf8ea7f47f2c6c402fd755d0918daf43b2f73838"
+    },
+    "sky-server/src/main/resources/mapper/AddressBookMapper.xml": {
+      "size": 1152,
+      "sha256": "3485b6e77a7e5b44091b61e3c24f75576f56c2097d4908082174c6f52adc846e"
+    },
+    "sky-server/src/main/resources/mapper/CategoryMapper.xml": {
+      "size": 1976,
+      "sha256": "0e0bd2d8f7de99bb02db6f0160ff49d3ac99254909eeec34cd79b11af9461146"
+    },
+    "sky-server/src/main/resources/mapper/SetmealMapper.xml": {
+      "size": 3390,
+      "sha256": "c5b381d8d5d1b6cdc41778e7fbf00627689af6f5d34b5ed42cb06843d9bfdee9"
+    },
+    "sky-server/src/main/resources/mapper/DishFlavorMapper.xml": {
+      "size": 1158,
+      "sha256": "242f39c6b2695da07c7ae00c46d1318ff0ddb0f771fba49790f2eb0a58b57893"
+    },
+    "sky-server/src/main/resources/mapper/OrderDetailMapper.xml": {
+      "size": 1355,
+      "sha256": "e466323be8298591632dcc4c968e7b0066cfa2611a2bf9380049d3f7065bfab9"
+    },
+    "sky-server/src/test/java/com/example/skyserver/SkyServerApplicationTests.java": {
+      "size": 225,
+      "sha256": "320e8dcf790a58bb5050ea72ce3829104fc7b086f6bde1fad57749c1a7f60f05"
+    },
+    "sky-server/src/test/java/com/example/skyserver/EmployeeSerializationTest.java": {
+      "size": 688,
+      "sha256": "0db515c71dc88530b2dbc7bf9799c9b09c132862cb9af5f00de1109d5324d730"
+    },
+    "sky-server/src/test/java/com/example/skyserver/RedisConnectionTest.java": {
+      "size": 1126,
+      "sha256": "dadd5c8e404c3fa73e5d6349825bc4b1b97143c94fc8409a21599792f50ff770"
+    },
+    "sky-server/src/test/java/com/example/skyserver/PasswordTest.java": {
+      "size": 599,
+      "sha256": "61ab5253495a9ab3e463375ff3023d1cc8f5132a4fd679a3c58cb0af3a1a98b6"
+    },
+    "sky-server/src/test/java/com/example/skyserver/service/impl/DishServiceImplCacheTest.java": {
+      "size": 5154,
+      "sha256": "7552de38a1014f0689e6e2cd91e05961008c9a2cb4585ed704482aa1f204fd26"
+    },
+    ".github/workflows/ci.yml": {
+      "size": 1064,
+      "sha256": "d3c3a8f04df8b6df58d4e9b275ba2b83b9f43a554f47c00b363b48d08726f8e8"
+    },
+    "sql/migrations/001_ack_event_cascade.sql": {
+      "size": 522,
+      "sha256": "02e830499bd6fc3e78a87fdaa95066968e58d0dc71121f3f54533eb33b98420f"
+    },
+    "docs/delivery/source-changes.json": {
+      "size": 2552,
+      "sha256": "2a3e74d941ed7610cece14a18266af5c2ed04c360205b94e0e46520038d3c707"
+    },
+    "docs/delivery/known-issues.md": {
+      "size": 2488,
+      "sha256": "e8d63a96172800e7a3251cbf83528f43fcd17c453a9681470652ba884316bd7f"
+    },
+    "docs/delivery/step-1-review.md": {
+      "size": 2685,
+      "sha256": "68c99ca2ff0e4d25e65923d6426ea87099f20ffa563c5620d7b6f8c627a787c5"
+    },
+    "docs/delivery/delivery-status.md": {
+      "size": 2920,
+      "sha256": "67753dad7c630fa97f7da95c521ca536862a40d80306a7ac46578da29f53847a"
+    },
+    "docs/deployment/deployment-guide.md": {
+      "size": 6745,
+      "sha256": "3b331dce1eaf5fc7326b48c39f47987578939c1b2e2478682906df9703bcd7d4"
+    },
+    "docs/deployment/github-release.md": {
+      "size": 2547,
+      "sha256": "085e085e2426348d1723c09e2d24fe5012f4667effcaad77b8610af68d95bf81"
+    },
+    "docs/architecture/system-architecture.md": {
+      "size": 4763,
+      "sha256": "fa509515fb5d7ac0f4370c71791b6e84d78f92b1461a663e49594a63e2c0f92d"
+    },
+    "docs/api/routes.json": {
+      "size": 12781,
+      "sha256": "a60cfdbe7b1e3bcf86b1e40e2263a6c67ca4fd939e5ae50f71b03be3a949a3ff"
+    },
+    "docs/api/api-documentation.md": {
+      "size": 17368,
+      "sha256": "2e940d7a6e38692a27f89e6ac0eeaa5062e7a73d344bf0ae24a7fb5d092b2187"
+    },
+    "docs/testing/performance-report.md": {
+      "size": 4656,
+      "sha256": "df7150554b5d6b881f7c2190322b3d32863748db67a6927b7e4b4616d13445ab"
+    },
+    "docs/testing/historical-metrics.json": {
+      "size": 1418,
+      "sha256": "4d2c366a5feec886beec9dfe59870eecd4bfa285bffd3d0c51a1109cfaf2a2f1"
+    },
+    "docs/testing/static-check.json": {
+      "size": 110,
+      "sha256": "4ebc1dad95fee91742ebb5ce997f1e2eea7983159dbb54388f57a30d8a301542"
+    },
+    "docs/testing/frontend-check.json": {
+      "size": 414,
+      "sha256": "648f34e3ee78b74c266f58a206dd062023767ef24a3de58642b5f4b84a4e7e75"
+    },
+    "docs/database/source-review.md": {
+      "size": 2755,
+      "sha256": "0a230a4f9f979d163a7d411ea3bd583e4690fb879f732a8085fdf164480b9034"
+    },
+    "docs/database/schema-cache.json": {
+      "size": 32318,
+      "sha256": "e4cfa45c68a328d2b47d0ec79250ba7bb511dc1db2704470ed6384069e111443"
+    },
+    "docs/database/database-design.md": {
+      "size": 5317,
+      "sha256": "9a244b1ab343ffbedb5ed57b76347afdf973609633130aba0a24227c63148242"
+    },
+    "docs/testing/raw/round3.jtl": {
+      "size": 388024,
+      "sha256": "bda201dab180b300f41c0c0e0d21a1d46f1dd31ba7939760e8fd4d9b5dc46095"
+    },
+    "docs/testing/raw/round2.jtl": {
+      "size": 132267,
+      "sha256": "001cc82c0064b83e894924b0be1ad8056327d7c34905f83a042145774bb98997"
+    }
+  }
+}

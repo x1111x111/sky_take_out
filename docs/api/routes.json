@@ -1,0 +1,422 @@
+[
+  {
+    "method": "POST",
+    "path": "/user/addressBook",
+    "auth": "USER",
+    "source": "AddressBookController.java",
+    "signature": "Result<Long> save( @RequestBody AddressBook addressBook)"
+  },
+  {
+    "method": "GET",
+    "path": "/user/addressBook/list",
+    "auth": "USER",
+    "source": "AddressBookController.java",
+    "signature": "Result<List<AddressBook>> list()"
+  },
+  {
+    "method": "POST",
+    "path": "/admin/category",
+    "auth": "ADMIN",
+    "source": "CategoryController.java",
+    "signature": "Result save( @RequestBody @Valid CategorySaveDTO dto )"
+  },
+  {
+    "method": "GET",
+    "path": "/admin/category/page",
+    "auth": "ADMIN",
+    "source": "CategoryController.java",
+    "signature": "Result<PageResult<Category>> page(CategoryPageQueryDTO dto)"
+  },
+  {
+    "method": "PUT",
+    "path": "/admin/category",
+    "auth": "ADMIN",
+    "source": "CategoryController.java",
+    "signature": "Result update( @RequestBody @Valid CategoryUpdateDTO dto )"
+  },
+  {
+    "method": "DELETE",
+    "path": "/admin/category",
+    "auth": "ADMIN",
+    "source": "CategoryController.java",
+    "signature": "Result delete(Long id)"
+  },
+  {
+    "method": "GET",
+    "path": "/admin/category/list",
+    "auth": "ADMIN",
+    "source": "CategoryController.java",
+    "signature": "Result<List<Category>> list( @RequestParam Integer type)"
+  },
+  {
+    "method": "POST",
+    "path": "/admin/common/upload",
+    "auth": "ADMIN",
+    "source": "CommonController.java",
+    "signature": "Result<String> upload( @RequestParam(\"file\") MultipartFile file)"
+  },
+  {
+    "method": "GET",
+    "path": "/admin/dish/page",
+    "auth": "ADMIN",
+    "source": "DishController.java",
+    "signature": "Result<PageResult> page( @ParameterObject DishPageQueryDTO dto )"
+  },
+  {
+    "method": "POST",
+    "path": "/admin/dish",
+    "auth": "ADMIN",
+    "source": "DishController.java",
+    "signature": "Result<Void> save(@RequestBody @Valid DishDTO dto)"
+  },
+  {
+    "method": "PUT",
+    "path": "/admin/dish",
+    "auth": "ADMIN",
+    "source": "DishController.java",
+    "signature": "Result update(@RequestBody DishDTO dto)"
+  },
+  {
+    "method": "DELETE",
+    "path": "/admin/dish",
+    "auth": "ADMIN",
+    "source": "DishController.java",
+    "signature": "Result delete(Long id)"
+  },
+  {
+    "method": "POST",
+    "path": "/admin/dish/status/{status}",
+    "auth": "ADMIN",
+    "source": "DishController.java",
+    "signature": "Result status( @PathVariable Integer status, Long id )"
+  },
+  {
+    "method": "GET",
+    "path": "/admin/dish/{id}",
+    "auth": "ADMIN",
+    "source": "DishController.java",
+    "signature": "Result<DishDTO> getById( @PathVariable Long id)"
+  },
+  {
+    "method": "GET",
+    "path": "/admin/dishFlavor/{dishId}",
+    "auth": "ADMIN",
+    "source": "DishFlavorController.java",
+    "signature": "Result<List<DishFlavor>> getByDishId( @PathVariable Long dishId)"
+  },
+  {
+    "method": "POST",
+    "path": "/admin/dishFlavor",
+    "auth": "ADMIN",
+    "source": "DishFlavorController.java",
+    "signature": "Result save( @RequestBody DishFlavor dishFlavor)"
+  },
+  {
+    "method": "DELETE",
+    "path": "/admin/dishFlavor/{id}",
+    "auth": "ADMIN",
+    "source": "DishFlavorController.java",
+    "signature": "Result delete( @PathVariable Long id)"
+  },
+  {
+    "method": "POST",
+    "path": "/admin/employee/login",
+    "auth": "无需 Token",
+    "source": "EmployeeController.java",
+    "signature": "Result<EmployeeLoginVO> login( @RequestBody EmployeeLoginDTO employeeLoginDTO)"
+  },
+  {
+    "method": "GET",
+    "path": "/admin/employee/list",
+    "auth": "ADMIN",
+    "source": "EmployeeController.java",
+    "signature": "Result<List<Employee>> list( @Parameter( name = \"token\", description = \"登录成功后返回的JWT Token\", required = true, in = ParameterIn.HEADER ) @RequestHeader(\"token\") String token)"
+  },
+  {
+    "method": "GET",
+    "path": "/admin/employee/page",
+    "auth": "ADMIN",
+    "source": "EmployeeController.java",
+    "signature": "Result<PageResult<EmployeeVO>> page( @Parameter( description = \"JWT Token\", required = true, in = ParameterIn.HEADER ) @RequestHeader(\"token\") String token, @ParameterObject EmployeePageQueryDTO employeePageQueryDTO)"
+  },
+  {
+    "method": "POST",
+    "path": "/admin/employee",
+    "auth": "ADMIN",
+    "source": "EmployeeController.java",
+    "signature": "Result<String> save( @RequestBody EmployeeSaveDTO employeeSaveDTO)"
+  },
+  {
+    "method": "GET",
+    "path": "/admin/employee/{id}",
+    "auth": "ADMIN",
+    "source": "EmployeeController.java",
+    "signature": "Result<EmployeeVO> getById( @PathVariable Long id)"
+  },
+  {
+    "method": "PUT",
+    "path": "/admin/employee",
+    "auth": "ADMIN",
+    "source": "EmployeeController.java",
+    "signature": "Result<String> update( @RequestBody EmployeeUpdateDTO employeeUpdateDTO)"
+  },
+  {
+    "method": "POST",
+    "path": "/admin/employee/status/{status}",
+    "auth": "ADMIN",
+    "source": "EmployeeController.java",
+    "signature": "Result<String> updateStatus( @PathVariable Integer status, @RequestParam Long id)"
+  },
+  {
+    "method": "DELETE",
+    "path": "/admin/employee/{id}",
+    "auth": "ADMIN",
+    "source": "EmployeeController.java",
+    "signature": "Result<String> delete( @PathVariable Long id)"
+  },
+  {
+    "method": "GET",
+    "path": "/admin/order/conditionSearch",
+    "auth": "ADMIN",
+    "source": "OrdersController.java",
+    "signature": "Result<PageResult<Orders>> conditionSearch( @Valid OrdersPageQueryDTO dto)"
+  },
+  {
+    "method": "GET",
+    "path": "/admin/order/details/{id}",
+    "auth": "ADMIN",
+    "source": "OrdersController.java",
+    "signature": "Result<OrdersDetailDTO> details( @PathVariable Long id)"
+  },
+  {
+    "method": "PUT",
+    "path": "/admin/order/confirm",
+    "auth": "ADMIN",
+    "source": "OrdersController.java",
+    "signature": "Result confirm( @Valid @RequestBody OrdersConfirmDTO dto)"
+  },
+  {
+    "method": "PUT",
+    "path": "/admin/order/delivery/{id}",
+    "auth": "ADMIN",
+    "source": "OrdersController.java",
+    "signature": "Result delivery( @PathVariable Long id)"
+  },
+  {
+    "method": "PUT",
+    "path": "/admin/order/complete/{id}",
+    "auth": "ADMIN",
+    "source": "OrdersController.java",
+    "signature": "Result complete( @PathVariable Long id)"
+  },
+  {
+    "method": "PUT",
+    "path": "/admin/order/rejection",
+    "auth": "ADMIN",
+    "source": "OrdersController.java",
+    "signature": "Result rejection( @Valid @RequestBody OrdersRejectionDTO dto)"
+  },
+  {
+    "method": "GET",
+    "path": "/admin/order/statistics",
+    "auth": "ADMIN",
+    "source": "OrdersController.java",
+    "signature": "Result<OrderStatisticsVO> statistics()"
+  },
+  {
+    "method": "GET",
+    "path": "/admin/report/turnoverStatistics",
+    "auth": "ADMIN",
+    "source": "ReportController.java",
+    "signature": "Result<TurnoverReportVO> turnoverStatistics( @RequestParam @DateTimeFormat(pattern = \"yyyy-MM-dd\") LocalDate begin, @RequestParam @DateTimeFormat(pattern = \"yyyy-MM-dd\") LocalDate end)"
+  },
+  {
+    "method": "GET",
+    "path": "/admin/report/ordersStatistics",
+    "auth": "ADMIN",
+    "source": "ReportController.java",
+    "signature": "Result<OrderReportVO> ordersStatistics( @RequestParam @DateTimeFormat(pattern = \"yyyy-MM-dd\") LocalDate begin, @RequestParam @DateTimeFormat(pattern = \"yyyy-MM-dd\") LocalDate end)"
+  },
+  {
+    "method": "GET",
+    "path": "/admin/report/top10",
+    "auth": "ADMIN",
+    "source": "ReportController.java",
+    "signature": "Result<SalesTop10ReportVO> top10( @RequestParam @DateTimeFormat(pattern=\"yyyy-MM-dd\") LocalDate begin, @RequestParam @DateTimeFormat(pattern=\"yyyy-MM-dd\") LocalDate end)"
+  },
+  {
+    "method": "GET",
+    "path": "/admin/report/user",
+    "auth": "ADMIN",
+    "source": "ReportController.java",
+    "signature": "Result<UserReportVO> user( @RequestParam @DateTimeFormat(pattern = \"yyyy-MM-dd\") LocalDate begin, @RequestParam @DateTimeFormat(pattern = \"yyyy-MM-dd\") LocalDate end)"
+  },
+  {
+    "method": "POST",
+    "path": "/admin/setmeal",
+    "auth": "ADMIN",
+    "source": "SetmealController.java",
+    "signature": "Result save( @RequestBody SetmealDTO dto)"
+  },
+  {
+    "method": "GET",
+    "path": "/admin/setmeal/page",
+    "auth": "ADMIN",
+    "source": "SetmealController.java",
+    "signature": "Result<PageResult<Setmeal>> page( SetmealPageQueryDTO dto)"
+  },
+  {
+    "method": "GET",
+    "path": "/admin/setmeal/{id}",
+    "auth": "ADMIN",
+    "source": "SetmealController.java",
+    "signature": "Result<SetmealDTO> getById( @PathVariable Long id)"
+  },
+  {
+    "method": "PUT",
+    "path": "/admin/setmeal",
+    "auth": "ADMIN",
+    "source": "SetmealController.java",
+    "signature": "Result update( @RequestBody SetmealDTO dto)"
+  },
+  {
+    "method": "POST",
+    "path": "/admin/setmeal/status/{status}",
+    "auth": "ADMIN",
+    "source": "SetmealController.java",
+    "signature": "Result updateStatus( @PathVariable Integer status, @RequestParam Long id)"
+  },
+  {
+    "method": "DELETE",
+    "path": "/admin/setmeal",
+    "auth": "ADMIN",
+    "source": "SetmealController.java",
+    "signature": "Result delete( @RequestParam Long id)"
+  },
+  {
+    "method": "PUT",
+    "path": "/admin/shop/status/{status}",
+    "auth": "ADMIN",
+    "source": "ShopController.java",
+    "signature": "Result setStatus( @PathVariable Integer status)"
+  },
+  {
+    "method": "GET",
+    "path": "/admin/shop/status",
+    "auth": "ADMIN",
+    "source": "ShopController.java",
+    "signature": "Result<Integer> getAdminStatus()"
+  },
+  {
+    "method": "GET",
+    "path": "/user/shop/status",
+    "auth": "USER",
+    "source": "ShopController.java",
+    "signature": "Result<Integer> getUserStatus()"
+  },
+  {
+    "method": "POST",
+    "path": "/user/shoppingCart/add",
+    "auth": "USER",
+    "source": "ShoppingCartController.java",
+    "signature": "Result add( @RequestBody ShoppingCartDTO dto)"
+  },
+  {
+    "method": "GET",
+    "path": "/user/shoppingCart/list",
+    "auth": "USER",
+    "source": "ShoppingCartController.java",
+    "signature": "Result<List<ShoppingCart>> list()"
+  },
+  {
+    "method": "POST",
+    "path": "/user/shoppingCart/sub",
+    "auth": "USER",
+    "source": "ShoppingCartController.java",
+    "signature": "Result sub( @RequestBody ShoppingCartDTO dto)"
+  },
+  {
+    "method": "DELETE",
+    "path": "/user/shoppingCart/clean",
+    "auth": "USER",
+    "source": "ShoppingCartController.java",
+    "signature": "Result clean()"
+  },
+  {
+    "method": "GET",
+    "path": "/user/category/list",
+    "auth": "USER",
+    "source": "UserCategoryController.java",
+    "signature": "Result<List<Category>> list(@RequestParam Integer type)"
+  },
+  {
+    "method": "POST",
+    "path": "/user/user/login",
+    "auth": "无需 Token",
+    "source": "UserController.java",
+    "signature": "Result<String> login( @Valid @RequestBody UserLoginDTO dto)"
+  },
+  {
+    "method": "GET",
+    "path": "/user/dish/list",
+    "auth": "USER",
+    "source": "UserDishController.java",
+    "signature": "Result<List<DishDTO>> list( @RequestParam Long categoryId)"
+  },
+  {
+    "method": "POST",
+    "path": "/user/order/submit",
+    "auth": "USER",
+    "source": "UserOrderController.java",
+    "signature": "Result<Void> submit( @Valid @RequestBody OrdersSubmitDTO dto)"
+  },
+  {
+    "method": "GET",
+    "path": "/user/order/historyOrders",
+    "auth": "USER",
+    "source": "UserOrderController.java",
+    "signature": "Result<PageResult<Orders>> historyOrders( @Valid UserOrderPageQueryDTO dto)"
+  },
+  {
+    "method": "GET",
+    "path": "/user/order/orderDetail/{id}",
+    "auth": "USER",
+    "source": "UserOrderController.java",
+    "signature": "Result<OrdersDetailDTO> orderDetail( @PathVariable Long id)"
+  },
+  {
+    "method": "PUT",
+    "path": "/user/order/cancel/{id}",
+    "auth": "USER",
+    "source": "UserOrderController.java",
+    "signature": "Result<Void> cancel( @PathVariable Long id)"
+  },
+  {
+    "method": "POST",
+    "path": "/user/order/repetition/{id}",
+    "auth": "USER",
+    "source": "UserOrderController.java",
+    "signature": "Result<Void> repetition( @PathVariable Long id)"
+  },
+  {
+    "method": "POST",
+    "path": "/user/order/mock-pay/{id}",
+    "auth": "USER",
+    "source": "UserOrderController.java",
+    "signature": "Result<Void> mockPay(@PathVariable Long id)"
+  },
+  {
+    "method": "GET",
+    "path": "/user/setmeal/list",
+    "auth": "USER",
+    "source": "UserSetmealController.java",
+    "signature": "Result<List<Setmeal>> list( @RequestParam Long categoryId)"
+  },
+  {
+    "method": "GET",
+    "path": "/admin/workspace/businessData",
+    "auth": "ADMIN",
+    "source": "WorkspaceController.java",
+    "signature": "Result<BusinessDataVO> businessData()"
+  }
+]

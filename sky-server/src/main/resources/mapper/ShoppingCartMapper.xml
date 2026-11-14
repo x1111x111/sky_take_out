@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.example.skyserver.mapper.ShoppingCartMapper">
+
+
+    <!-- 查询购物车中是否已有相同商品 -->
+
+    <select id="getByUserIdAndDish"
+            resultType="com.example.skyserver.entity.ShoppingCart">
+
+        select *
+        from shopping_cart
+        where user_id = #{userId}
+
+        <choose>
+
+            <!-- 菜品 -->
+            <when test="dishId != null">
+
+                and dish_id = #{dishId}
+
+                <choose>
+                    <when test="dishFlavor != null and dishFlavor != ''">
+                        and dish_flavor = #{dishFlavor}
+                    </when>
+
+                    <otherwise>
+                        and (dish_flavor is null or dish_flavor = '')
+                    </otherwise>
+                </choose>
+
+            </when>
+
+
+            <!-- 套餐 -->
+            <when test="setmealId != null">
+
+                and setmeal_id = #{setmealId}
+
+            </when>
+
+        </choose>
+
+        limit 1
+
+    </select>
+
+
+
+    <insert id="insert">
+
+        insert into shopping_cart
+        (
+        name,
+        image,
+        user_id,
+        dish_id,
+        setmeal_id,
+        dish_flavor,
+        number,
+        amount,
+        create_time
+        )
+
+        values
+        (
+        #{name},
+        #{image},
+        #{userId},
+        #{dishId},
+        #{setmealId},
+        #{dishFlavor},
+        #{number},
+        #{amount},
+        now()
+        )
+
+    </insert>
+
+
+
+    <update id="updateNumber">
+
+        update shopping_cart
+
+        set number = #{number}
+
+        where id = #{id}
+
+    </update>
+
+
+
+    <select id="list"
+            resultType="com.example.skyserver.entity.ShoppingCart">
+
+        select *
+
+        from shopping_cart
+
+        where user_id = #{userId}
+
+        order by create_time desc
+
+    </select>
+    <select id="listForUpdate" resultType="com.example.skyserver.entity.ShoppingCart">
+        select * from shopping_cart where user_id = #{userId}
+        order by id for update
+    </select>
+    <delete id="deleteSelected">
+        delete from shopping_cart where user_id = #{userId} and id in
+        <foreach collection="ids" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+
+
+    <delete id="deleteByUserId">
+
+        delete from shopping_cart
+
+        where user_id = #{userId}
+
+    </delete>
+
+    <delete id="deleteById">
+        delete from shopping_cart
+        where id = #{id}
+    </delete>
+
+    <!--<delete id="clean">
+
+        delete from shopping_cart
+
+        where user_id = #{userId}
+
+    </delete>-->
+</mapper>

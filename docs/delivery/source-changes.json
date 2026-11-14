@@ -1,0 +1,98 @@
+[
+  {
+    "file": "sky-server/.env.example",
+    "status": "added"
+  },
+  {
+    "file": "sky-server/.mvn/wrapper/maven-wrapper.properties",
+    "status": "removed"
+  },
+  {
+    "file": "sky-server/package-lock.json",
+    "status": "removed"
+  },
+  {
+    "file": "sky-server/pom.xml",
+    "status": "modified"
+  },
+  {
+    "file": "sky-server/src/main/java/com/example/skyserver/cache/CacheInvalidationListener.java",
+    "status": "modified"
+  },
+  {
+    "file": "sky-server/src/main/java/com/example/skyserver/controller/TestController.java",
+    "status": "removed"
+  },
+  {
+    "file": "sky-server/src/main/java/com/example/skyserver/controller/UserOrderController.java",
+    "status": "modified"
+  },
+  {
+    "file": "sky-server/src/main/java/com/example/skyserver/entity/Employee.java",
+    "status": "modified"
+  },
+  {
+    "file": "sky-server/src/main/java/com/example/skyserver/exception/GlobalExceptionHandler.java",
+    "status": "removed"
+  },
+  {
+    "file": "sky-server/src/main/java/com/example/skyserver/service/CacheInvalidationPublisher.java",
+    "status": "removed"
+  },
+  {
+    "file": "sky-server/src/main/java/com/example/skyserver/service/DishService.java",
+    "status": "modified"
+  },
+  {
+    "file": "sky-server/src/main/java/com/example/skyserver/service/impl/DishServiceImpl.java",
+    "status": "modified"
+  },
+  {
+    "file": "sky-server/src/main/java/com/example/skyserver/service/impl/EmployeeServiceImpl.java",
+    "status": "modified"
+  },
+  {
+    "file": "sky-server/src/main/java/com/example/skyserver/service/impl/UserServiceImpl.java",
+    "status": "modified"
+  },
+  {
+    "file": "sky-server/src/main/resources/application.yml",
+    "status": "modified"
+  },
+  {
+    "file": "sky-server/src/test/java/com/example/skyserver/EmployeeSerializationTest.java",
+    "status": "added"
+  },
+  {
+    "file": "sky-server/src/test/java/com/example/skyserver/PasswordTest.java",
+    "status": "modified"
+  },
+  {
+    "file": "sky-server/src/test/java/com/example/skyserver/service/impl/DishServiceImplCacheTest.java",
+    "status": "modified"
+  },
+  {
+    "file": "sky-admin/src/api/test.js",
+    "status": "removed"
+  },
+  {
+    "file": "sky-admin/src/assets/vite.svg",
+    "status": "removed"
+  },
+  {
+    "file": "sky-admin/src/assets/vue.svg",
+    "status": "removed"
+  },
+  {
+    "file": "sky-admin/src/components/HelloWorld.vue",
+    "status": "removed"
+  },
+  {
+    "file": "sql/migrations/001_ack_event_cascade.sql",
+    "status": "added"
+  },
+  {
+    "file": "sql/sky_take_out.sql",
+    "status": "modified"
+  }
+]

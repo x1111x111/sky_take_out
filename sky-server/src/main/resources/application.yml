@@ -1,0 +1,38 @@
+server:
+  port: ${SERVER_PORT:8080}
+spring:
+  application:
+    name: sky-server
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 5MB
+  data:
+    redis:
+      host: ${REDIS_HOST:127.0.0.1}
+      port: ${REDIS_PORT:6379}
+      password: ${REDIS_PASSWORD:}
+      database: ${REDIS_DATABASE:0}
+      timeout: 3000ms
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${DB_URL:jdbc:mysql://localhost:3306/sky_take_out?serverTimezone=Asia/Shanghai&characterEncoding=utf-8}
+    username: ${DB_USERNAME:sky}
+    password: ${DB_PASSWORD}
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+sky:
+  jwt:
+    admin-secret-key: ${JWT_SECRET}
+    admin-ttl: 7200000
+  payment:
+    mock-enabled: ${MOCK_PAYMENT_ENABLED:false}
+  cache:
+    instance-id: ${CACHE_INSTANCE_ID:server-A}
+    expected-instance-ids: ${CACHE_EXPECTED_INSTANCE_IDS:server-A}
+    poll-interval-ms: 2000
+    poll-initial-delay-ms: 5000
+    event-retention-days: 7
+    cleanup-interval-ms: 3600000
